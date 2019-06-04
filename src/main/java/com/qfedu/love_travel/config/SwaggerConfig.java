@@ -10,6 +10,8 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
+
+//这里是接口注释文档，不需要可以整个java文件删除
 @Configuration //标记这是一个配置
 public class SwaggerConfig {
 
