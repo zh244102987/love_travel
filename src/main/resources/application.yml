@@ -1,11 +1,15 @@
 spring:
+
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: root
+    password: qfjava
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_love_travel?serverTimezone=UTC&characterEncoding=UTF8
+    url: jdbc:mysql://101.132.67.84:3306/db_love_travel?serverTimezone=UTC&characterEncoding=UTF8
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/*.xml
+  mapper-locations: classpath*:mapper/**/*.xml
 server:
   port: 8080
+
+
+
