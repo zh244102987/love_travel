@@ -61,15 +61,15 @@ public class UserConteoller {
     @PostMapping("/save.do")
     @CrossOrigin
     public R AddUser(User user) throws UnsupportedEncodingException, NoSuchAlgorithmException {
-            User user1 = new User();
-        String loginpassword = user.getLoginpassword();
+
+
 
           //String  password = md5.EncoderByMd5(loginpassword);
-        String s = md5.EncoderByMd5(loginpassword);
+        //String s = md5.EncoderByMd5(loginpassword);
         //System.out.println("得到加密后的密码了吗+"+s);
 
-        user1.setLoginpassword(s);
-        return R.setOK("OK", userService.save(user1));
+
+        return R.setOK("OK", userService.save(user));
 
     }
 

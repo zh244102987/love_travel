@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 
 public interface UserMapper extends BaseMapper<User> {
 
-    //@Select("select * from user where phone=#{phone}")
+    @Select("select * from user where phone=#{phone}")
     public User selectByPhone(String phone);
 
    // @Insert("insert into user phone#{phone},loginpassword=#{loginpassword},email=#{email},realname=#{realname},flag=#{flag},reamin=#{reamin},regtime=#{regtime},headimgurl=#{headimgurl},address=#{address}")
