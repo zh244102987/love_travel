@@ -23,7 +23,7 @@ public class UserConteoller {
     @Autowired(required = false)
     UserService userService;
 
-    private MD5 md5;
+    private MD5 md5 = new MD5();
 
 
     @ApiOperation(value = "查询所有用户")
@@ -62,13 +62,12 @@ public class UserConteoller {
     @CrossOrigin
     public R AddUser(User user) throws UnsupportedEncodingException, NoSuchAlgorithmException {
 
-
-
-          //String  password = md5.EncoderByMd5(loginpassword);
+        String loginpassword = user.getLoginpassword();
+        String password = md5.EncoderByMd5(loginpassword);
+        System.out.println("****************"+password);
+        user.setLoginpassword(password);
         //String s = md5.EncoderByMd5(loginpassword);
         //System.out.println("得到加密后的密码了吗+"+s);
-
-
         return R.setOK("OK", userService.save(user));
 
     }
