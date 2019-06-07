@@ -13,5 +13,5 @@ public interface UserMapper extends BaseMapper<User> {
     public User selectByPhone(String phone);
 
    // @Insert("insert into user phone#{phone},loginpassword=#{loginpassword},email=#{email},realname=#{realname},flag=#{flag},reamin=#{reamin},regtime=#{regtime},headimgurl=#{headimgurl},address=#{address}")
-    //public void addUser(User user);
+    //public void addUser(User user1);
 }
