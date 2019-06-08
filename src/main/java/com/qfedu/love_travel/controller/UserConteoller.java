@@ -36,9 +36,12 @@ public class UserConteoller {
 
         @ApiOperation(value = "登陆接口")
         @GetMapping("/login.do")
-        public R login(String phone,String loginpassword) {
-            User login = userService.Login(phone,loginpassword);
-            return R.setOK("OK",login);
+        public R login(String phone,String loginpassword) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+
+
+                User login = userService.Login(phone,loginpassword);
+
+                return R.setOK("OK",login);
 
         }
  /*   @ApiOperation(value = "查询所有用户")
@@ -61,14 +64,10 @@ public class UserConteoller {
     @PostMapping("/save.do")
     @CrossOrigin
     public R AddUser(User user) throws UnsupportedEncodingException, NoSuchAlgorithmException {
-
-        String loginpassword = user.getLoginpassword();
-        String password = md5.EncoderByMd5(loginpassword);
-        System.out.println("****************"+password);
-        user.setLoginpassword(password);
         //String s = md5.EncoderByMd5(loginpassword);
         //System.out.println("得到加密后的密码了吗+"+s);
-        return R.setOK("OK", userService.save(user));
+        userService.addUser(user);
+        return R.setOK("OK", null);
 
     }
 

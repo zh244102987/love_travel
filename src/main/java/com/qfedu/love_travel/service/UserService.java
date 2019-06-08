@@ -10,6 +10,7 @@ import java.security.NoSuchAlgorithmException;
 public interface UserService extends IService<User> {
 
 
-    public User Login(String phone,String loginpassword);
+    public User Login(String phone,String loginpassword) throws UnsupportedEncodingException, NoSuchAlgorithmException;
 
+    public void addUser(User user) throws UnsupportedEncodingException, NoSuchAlgorithmException;
 }
