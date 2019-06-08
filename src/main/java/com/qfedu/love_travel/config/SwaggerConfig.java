@@ -16,9 +16,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfig {
 
     public ApiInfo createA(){
-        ApiInfo info = new ApiInfoBuilder().title("这里填写描述的什么数据接口 列如xx项目的数据接口").
+        ApiInfo info = new ApiInfoBuilder().title("旅游app数据接口").
                 contact(new Contact("Java1901","http://www.baidu.com","751299914@qq.com")).
-                description("这里写接口实现的是什么项目的的数据接口").build();
+                description("实现一个旅游项目的数据接口信息").build();
 
         return info;
     }
@@ -26,7 +26,7 @@ public class SwaggerConfig {
     @Bean //创建对象，修饰方法，方法的返回值必须是引用类型，对象储存在ioc中
     public Docket createDocket(){
         Docket docket = new Docket(DocumentationType.SWAGGER_2).apiInfo(createA()).select().
-                apis(RequestHandlerSelectors.basePackage("这里要填写controller层的全限定路劲")).build();
+                apis(RequestHandlerSelectors.basePackage("com.qfedu.love_travel.controller")).build();
         return docket;
     }
 }
