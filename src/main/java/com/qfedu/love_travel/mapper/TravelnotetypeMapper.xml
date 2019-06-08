@@ -4,10 +4,45 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.qfedu.entity.Travelnotetype">
-        <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="typelevel" property="typelevel" />
-        <result column="pid" property="pid" />
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="typelevel" property="typelevel"/>
+        <result column="pid" property="pid"/>
     </resultMap>
 
+    <resultMap id="VTravelNoteTypeMap" type="com.qfedu.vo.VTravelNoteType">
+        <id column="cid" property="id"/>
+        <result column="cname" property="name"/>
+        <result column="ccount" property="ccount"/>
+    </resultMap>
+
+    <resultMap id="TypeInfoMap" type="com.qfedu.vo.VTravelNoteTypeInfo">
+        <id column="id" property="pid"/>
+        <result column="name" property="pName"/>
+        <collection property="cType" javaType="java.util.ArrayList" ofType="VTravelNoteType" resultMap="VTravelNoteTypeMap"/>
+    </resultMap>
+
+    <!-- 查询所有分类信息 -->
+    <select id="selectAllTypeInfo" resultType="TypeInfoMap">
+        select p.id, p.name, c.id cid, c.name cname, count(s.id) ccount from travelnotetype p
+        left join travelnotetype c
+        on c.pid=p.id
+        left join travelnotetype s
+        on s.pid = c.id
+        where p.pid=0
+        by cname
+        order by p.id,ccount desc;
+    </select>
+
+    <!-- 根据父分类查询所有子分类 -->
+    <select id="selectByPid" parameterType="int" resultType="TypeInfoMap">
+        select p.id, p.name, c.id cid, c.name cname, count(s.id) ccount from travelnotetype p
+        left join travelnotetype c
+        on c.pid=p.id
+        left join travelnotetype s
+        on s.pid = c.id
+        where p.id=#{id}
+        by cname
+        order by p.id,ccount desc;
+    </select>
 </mapper>
