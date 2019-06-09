@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * 游记评论 前端控制器
  * </p>
  *
- * @author hai123
- * @since 2019-06-06
+ * @author 段继亮
+ * @since 2019-06-09
  */
 @Controller
 @RequestMapping("/travelnotecomment")
