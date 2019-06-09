@@ -12,4 +12,12 @@
         <result column="source" property="source" />
     </resultMap>
 
+    <select id="selectAllCommentByNoteId" resultType="com.qfedu.love_travel.vo.VTravelNoteComment">
+        select c.id, c.travelnoteid, c.userid, c.createtime, c.info, c.source, u.realname, u.headimgurl
+        from travelnotecomment c
+        inner join user u
+        on u.id=c.userid
+        where c.travelnoteid=#{noteId}
+        order by c.createtime asc
+    </select>
 </mapper>

@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/travelnotetype")
 @ResponseBody
-@Api(value = "查询攻略类型的接口",tags = "查询攻略分类的数据接口")
+@Api(value = "查询游记类型的接口",tags = "查询游记分类的数据接口")
 public class TravelnotetypeController {
 
     @Autowired(required = false)

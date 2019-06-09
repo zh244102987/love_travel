@@ -9,4 +9,19 @@
         <result column="destid" property="destid" />
     </resultMap>
 
+    <select id="selectVDestByTid" parameterType="int" resultType="com.qfedu.love_travel.vo.VHotelTypeDest">
+		select d.*,p.name as 'pname' from hoteltype_dest t
+        inner join destination d
+        on t.destid = d.id
+		inner join destination p
+        on d.pid=p.id
+        where t.hoteltypeid=#{hoteltypeid};
+    </select>
+
+    <select id="selectDestByTid" parameterType="int" resultType="com.qfedu.love_travel.entity.Destination">
+		select d.* from hoteltype_dest t
+        inner join destination d
+        on t.destid = d.id
+        where t.hoteltypeid=#{hoteltypeid};
+    </select>
 </mapper>

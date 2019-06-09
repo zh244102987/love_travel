@@ -43,6 +43,6 @@
         on s.pid = c.id
         where p.id=#{id}
         group by cname
-        order by p.id,ccount desc;
+        order by p.id,ccount desc
     </select>
 </mapper>

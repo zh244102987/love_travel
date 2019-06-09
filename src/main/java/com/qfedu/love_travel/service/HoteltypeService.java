@@ -3,6 +3,9 @@ package com.qfedu.love_travel.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.qfedu.love_travel.entity.Hoteltype;
+import com.qfedu.love_travel.vo.VHotelMenuInfo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -14,4 +17,7 @@ import com.qfedu.love_travel.entity.Hoteltype;
  */
 public interface HoteltypeService extends IService<Hoteltype> {
 
+    List<VHotelMenuInfo> findMenuByTheme();
+
+    List<VHotelMenuInfo> findMenuBySale();
 }

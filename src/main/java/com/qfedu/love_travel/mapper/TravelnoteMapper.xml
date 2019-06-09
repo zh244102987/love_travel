@@ -15,4 +15,29 @@
         <result column="travelnotetypeid" property="travelnotetypeid" />
     </resultMap>
 
+    <select id="selectAll" resultType="com.qfedu.love_travel.vo.VTravelNote">
+        select t.id, t.title, t.summary, t.sketchimgurl, t.userid, t.browsecount, t.likecount,
+        t.commentcount, t.travelnotetypeid, u.realname, u.headimgurl, tt.name typename
+        from travelnote t
+        inner join user u
+        on u.id=t.userid
+        inner join travelnotetype tt
+        on tt.id=t.travelnotetypeid
+    </select>
+
+    <select id="selectTopFive" resultMap="BaseResultMap">
+      select id, sketchimgurl, travelnotetypeid
+      from travelnote
+      order by browsecount desc limit 5
+    </select>
+
+    <select id="selectTopTen" resultType="com.qfedu.love_travel.entity.Travelnotetype">
+        select t.*, count(likecount) sumlikecount
+        from travelnote tn
+        inner join travelnotetype t
+        on tn.travelnotetypeid=t.id and t.typelevel=3
+        group by tn.travelnotetypeid
+        order by sumlikecount desc
+        limit 10
+    </select>
 </mapper>

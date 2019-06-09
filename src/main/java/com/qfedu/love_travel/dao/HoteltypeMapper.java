@@ -4,6 +4,8 @@ package com.qfedu.love_travel.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.qfedu.love_travel.entity.Hoteltype;
 
+import java.util.List;
+
 /**
  * <p>
  * 酒店分类 Mapper 接口
@@ -14,4 +16,5 @@ import com.qfedu.love_travel.entity.Hoteltype;
  */
 public interface HoteltypeMapper extends BaseMapper<Hoteltype> {
 
+    List<Hoteltype> selectAllByPName(String pTypename);
 }

@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.qfedu.love_travel.dao.TravelnoteinfoMapper;
 import com.qfedu.love_travel.entity.Travelnoteinfo;
 import com.qfedu.love_travel.service.TravelnoteinfoService;
+import com.qfedu.love_travel.vo.VTravelNoteInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,4 +20,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TravelnoteinfoServiceImpl extends ServiceImpl<TravelnoteinfoMapper, Travelnoteinfo> implements TravelnoteinfoService {
 
+    @Autowired(required = false)
+    private TravelnoteinfoMapper travelnoteinfoMapper;
+
+    @Override
+    public VTravelNoteInfo findById(Integer id) {
+        return travelnoteinfoMapper.selectOneById(id);
+    }
 }
