@@ -90,6 +90,7 @@ public class Destination implements Serializable {
         ", name=" + name +
         ", pid=" + pid +
         ", destlevel=" + destlevel +
+        ", imgurl=" + imgurl +
         "}";
     }
 }

@@ -6,10 +6,24 @@ spring:
     password: xxx
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://0.0.0.0:3306/db_love_travel?serverTimezone=UTC&characterEncoding=UTF8
+  mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.winter.model
+
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml
+
 server:
   port: 8080
+
+#web:
+ # upload-path: D:/img/images #自定义文件上传路径
+
+#配置上传文件的最大值
+#servlet:
+ # multipart:
+  #  max-file-size: 5Mb
+   # max-request-size: 50Mb
 
 
 
