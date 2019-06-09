@@ -12,17 +12,17 @@ import java.util.List;
  * 游记分类 Mapper 接口
  * </p>
  *
- * @author hai123
- * @since 2019-06-06
+ * @author 段继亮
+ * @since 2019-06-08
  */
 public interface TravelnotetypeMapper extends BaseMapper<Travelnotetype> {
 
     /**
-     * 根据父分类查询所有子分类
-     * @param pid
+     * 根据一级分类id查询所有子分类
+     * @param id
      * @return
      */
-    public List<VTravelNoteTypeInfo> selectByPid(Integer pid);
+    public List<VTravelNoteTypeInfo> selectById(Integer id);
 
     /**
      * 查询所有分类信息

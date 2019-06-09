@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * 游记分类 前端控制器
  * </p>
  *
- * @author hai123
- * @since 2019-06-06
+ * @author 段继亮
+ * @since 2019-06-08
  */
 @Controller
 @RequestMapping("/travelnotetype")
@@ -29,16 +29,16 @@ public class TravelnotetypeController {
     @Autowired(required = false)
     private TravelnotetypeService travelnotetypeService;
 
-    @GetMapping("/travelnotetype/findAll.do")
+    @GetMapping("/findAll.do")
     @ApiOperation(value = "查询一级和二级分类信息")
     public R findAllTypeInfo() {
         return R.setOK("OK", travelnotetypeService.findAllTypeInfo());
     }
 
-    @GetMapping("/travelnotetype/findByPid.do")
-    @ApiOperation(value = "根据父id查询分类信息")
-    public R findTypeByPid(Integer pid) {
-        return R.setOK("OK", travelnotetypeService.findByPid(pid));
+    @GetMapping("/findById.do")
+    @ApiOperation(value = "根据一级分类id查询子分类信息")
+    public R findTypeById(Integer id) {
+        return R.setOK("OK", travelnotetypeService.findById(id));
     }
 }
 

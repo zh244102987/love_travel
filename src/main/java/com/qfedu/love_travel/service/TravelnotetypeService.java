@@ -19,10 +19,10 @@ public interface TravelnotetypeService extends IService<Travelnotetype> {
 
     /**
      * 根据父分类查询所有子分类
-     * @param pid
+     * @param id
      * @return
      */
-    public List<VTravelNoteTypeInfo> findByPid(Integer pid);
+    public List<VTravelNoteTypeInfo> findById(Integer id);
 
     /**
      * 查询所有分类信息

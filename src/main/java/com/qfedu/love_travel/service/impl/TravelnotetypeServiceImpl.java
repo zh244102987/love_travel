@@ -26,8 +26,8 @@ public class TravelnotetypeServiceImpl extends ServiceImpl<TravelnotetypeMapper,
     private TravelnotetypeMapper travelnotetypeMapper;
 
     @Override
-    public List<VTravelNoteTypeInfo> findByPid(Integer pid) {
-        return travelnotetypeMapper.selectByPid(pid);
+    public List<VTravelNoteTypeInfo> findById(Integer id) {
+        return travelnotetypeMapper.selectById(id);
     }
 
     @Override

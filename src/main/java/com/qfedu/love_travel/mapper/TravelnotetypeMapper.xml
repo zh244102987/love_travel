@@ -30,19 +30,19 @@
         left join travelnotetype s
         on s.pid = c.id
         where p.pid=0
-        by cname
+        group by cname
         order by p.id,ccount desc;
     </select>
 
-    <!-- 根据父分类查询所有子分类 -->
-    <select id="selectByPid" parameterType="int" resultMap="TypeInfoMap">
+    <!-- 根据一级分类id查询所有子分类 -->
+    <select id="selectById" parameterType="int" resultMap="TypeInfoMap">
         select p.id, p.name, c.id cid, c.name cname, count(s.id) ccount from travelnotetype p
         left join travelnotetype c
         on c.pid=p.id
         left join travelnotetype s
         on s.pid = c.id
         where p.id=#{id}
-        by cname
+        group by cname
         order by p.id,ccount desc;
     </select>
 </mapper>
