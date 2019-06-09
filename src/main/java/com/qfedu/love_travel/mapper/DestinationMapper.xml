@@ -3,7 +3,7 @@
 <mapper namespace="com.qfedu.mapper.DestinationMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.qfedu.entity.Destination">
+    <resultMap id="BaseResultMap" type="com.qfedu.love_travel.entity.Destination">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="pid" property="pid" />

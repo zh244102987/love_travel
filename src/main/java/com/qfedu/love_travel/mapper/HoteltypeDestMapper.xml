@@ -3,7 +3,7 @@
 <mapper namespace="com.qfedu.mapper.HoteltypeDestMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.qfedu.entity.HoteltypeDest">
+    <resultMap id="BaseResultMap" type="com.qfedu.love_travel.entity.HoteltypeDest">
         <id column="id" property="id" />
         <result column="hoteltypeid" property="hoteltypeid" />
         <result column="destid" property="destid" />

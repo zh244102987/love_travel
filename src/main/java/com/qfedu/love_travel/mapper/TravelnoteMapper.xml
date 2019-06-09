@@ -3,7 +3,7 @@
 <mapper namespace="com.qfedu.mapper.TravelnoteMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.qfedu.entity.Travelnote">
+    <resultMap id="BaseResultMap" type="com.qfedu.love_travel.entity.Travelnote">
         <id column="id" property="id" />
         <result column="title" property="title" />
         <result column="summary" property="summary" />

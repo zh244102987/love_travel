@@ -3,7 +3,7 @@
 <mapper namespace="com.qfedu.mapper.HotelsupportingMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.qfedu.entity.Hotelsupporting">
+    <resultMap id="BaseResultMap" type="com.qfedu.love_travel.Hotelsupporting">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="level" property="level" />

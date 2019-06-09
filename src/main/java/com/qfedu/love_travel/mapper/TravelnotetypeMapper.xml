@@ -3,20 +3,20 @@
 <mapper namespace="com.qfedu.mapper.TravelnotetypeMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.qfedu.entity.Travelnotetype">
+    <resultMap id="BaseResultMap" type="com.qfedu.love_travel.entity.Travelnotetype">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="typelevel" property="typelevel"/>
         <result column="pid" property="pid"/>
     </resultMap>
 
-    <resultMap id="VTravelNoteTypeMap" type="com.qfedu.vo.VTravelNoteType">
+    <resultMap id="VTravelNoteTypeMap" type="com.qfedu.love_travel.vo.VTravelNoteType">
         <id column="cid" property="id"/>
         <result column="cname" property="name"/>
         <result column="ccount" property="ccount"/>
     </resultMap>
 
-    <resultMap id="TypeInfoMap" type="com.qfedu.vo.VTravelNoteTypeInfo">
+    <resultMap id="TypeInfoMap" type="com.qfedu.love_travel.vo.VTravelNoteTypeInfo">
         <id column="id" property="pid"/>
         <result column="name" property="pName"/>
         <collection property="cType" javaType="java.util.ArrayList" ofType="VTravelNoteType" resultMap="VTravelNoteTypeMap"/>
