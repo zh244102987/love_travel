@@ -26,4 +26,17 @@
         <result column="createtime" property="createtime" />
     </resultMap>
 
+    <select id="selectOneById" parameterType="int" resultType="com.qfedu.love_travel.vo.VTravelNoteInfo">
+        select t.id, t.travelnoteid, t.coverimgurl, t.title, t.userid, t.starttime, t.traveldays,
+        t.relationshipid, t.percost, t.info, t.aboutnote1id, t.aboutnote2id, t.aboutnote3id,
+        t.aboutdestinationid, t.collectcount, t.sharecount, t.fontcount, t.imagecount, t.clickcount,
+        t.createtime, u.realname, u.headimgurl, r.name rname, d.imgurl destimgurl, d.name destname from travelnoteinfo t
+        inner join user u
+        on u.id=t.userid
+        inner join relationship r
+        on t.relationshipid=r.id
+        inner join destination d
+        on d.id=t.aboutdestinationid
+        where t.id=#{id}
+    </select>
 </mapper>
