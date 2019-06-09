@@ -27,9 +27,8 @@ public class TravelnoteServiceImpl extends ServiceImpl<TravelnoteMapper, Traveln
 
     @Transactional(readOnly = true)
     @Override
-    public Page<VTravelNote> findTravelNoteByPage(Integer pageNum, Integer size) {
-//        Page<VTravelNote> page = new Page<>(pageNum, size);
-        Page<VTravelNote> page = new Page<>(1, 5);
-        return page.setRecords(travelnoteMapper.selectAllTravelNote(page));
+    public Page<VTravelNote> findByPage(Integer currentPage, Integer size) {
+        Page<VTravelNote> page = new Page<>(currentPage, size);
+        return page.setRecords(travelnoteMapper.selectAll(page));
     }
 }

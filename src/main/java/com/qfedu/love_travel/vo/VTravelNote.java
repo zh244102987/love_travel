@@ -22,4 +22,5 @@ public class VTravelNote {
     private Integer travelnotetypeid;
     private String realname;
     private String headimgurl;
+    private String typename;
 }
