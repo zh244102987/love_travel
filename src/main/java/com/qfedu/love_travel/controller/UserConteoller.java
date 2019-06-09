@@ -4,6 +4,8 @@ package com.qfedu.love_travel.controller;
 import com.qfedu.love_travel.entity.User;
 import com.qfedu.love_travel.service.UserService;
 import com.qfedu.love_travel.util.MD5;
+import com.qfedu.love_travel.util.PhoneCode;
+import com.qfedu.love_travel.util.StaticPeram;
 import com.qfedu.love_travel.vo.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -15,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
@@ -27,7 +30,8 @@ public class UserConteoller {
     @Autowired(required = false)
     UserService userService;
 
-    private MD5 md5 = new MD5();
+
+   // PhoneCode phoneCode = new PhoneCode();
 
 
     @ApiOperation(value = "查询所有用户")
@@ -42,7 +46,6 @@ public class UserConteoller {
         @GetMapping("/login.do")
         @CrossOrigin
         public R login(String phone, String loginpassword) throws UnsupportedEncodingException, NoSuchAlgorithmException {
-
 
                 User login = userService.Login(phone,loginpassword);
 
@@ -61,11 +64,13 @@ public class UserConteoller {
     @ApiOperation(value = "新增用户",notes = "新增用户")
     @PostMapping("/save.do")
     @CrossOrigin
-    public R AddUser(User user) throws UnsupportedEncodingException, NoSuchAlgorithmException {
-        //String s = md5.EncoderByMd5(loginpassword);
-        //System.out.println("得到加密后的密码了吗+"+s);
-        userService.addUser(user);
-        return R.setOK("OK", null);
+    public R AddUser(User user,String code,String loginpassword1) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+
+
+
+
+            userService.addUser(user,code,loginpassword1);
+        return R.setOK("OK",null);
 
     }
  /*   @ApiOperation(value = "上传图片",notes = "上传图片")
@@ -112,6 +117,23 @@ public class UserConteoller {
     }*/
 
 
+
+    @ApiOperation(value = "短信接口测试",notes = "注册用户")
+    @PostMapping("/code.do")
+    @CrossOrigin
+    public R code(String phone,HttpSession session){
+
+
+         PhoneCode.getPhonemsg(phone);
+        String vcode = PhoneCode.vcode();
+        String code = PhoneCode.code;
+        System.out.println("code="+code);
+        session.setAttribute("code",code);
+        System.out.println("验证码获取到了吗？"+vcode);
+        //System.out.println(code1);
+
+        return R.setOK("OK",code);
+    }
 
 
 
