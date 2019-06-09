@@ -20,7 +20,7 @@ public class R {
 
     public static R setOK(String msg,Object data){
         R r = new R();
-        r.setData(1);
+        r.setCode(1);
         r.setMsg(msg);
         r.setData(data);
         return r;
@@ -28,9 +28,9 @@ public class R {
 
     public static R setERROR(){
         R r= new R();
-        r.setData(null);
-        r.setMsg("ERROR");
         r.setCode(0);
+        r.setMsg("ERROR");
+        r.setData(null);
         return r;
     }
 
