@@ -32,4 +32,10 @@ public interface TravelnoteService extends IService<Travelnote> {
      */
     public List<Travelnote> findTopFive();
 
+    /**
+     * 查询点赞数前前十的游记城市
+     * @return
+     */
+    public List<Travelnote> findTopTen();
+
 }

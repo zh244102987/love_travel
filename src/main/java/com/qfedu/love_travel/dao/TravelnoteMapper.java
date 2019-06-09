@@ -30,4 +30,10 @@ public interface TravelnoteMapper extends BaseMapper<Travelnote> {
      * @return
      */
     public List<Travelnote> selectTopFive();
+
+    /**
+     * 查询点赞数前前十的游记城市
+     * @return
+     */
+    public List<Travelnote> selectTopTen();
 }

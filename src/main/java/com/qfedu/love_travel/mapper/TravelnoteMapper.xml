@@ -30,4 +30,14 @@
       from travelnote
       order by browsecount desc limit 5
     </select>
+
+    <select id="selectTopTen" resultType="com.qfedu.love_travel.entity.Travelnotetype">
+        select t.*, count(likecount) sumlikecount
+        from travelnote tn
+        inner join travelnotetype t
+        on tn.travelnotetypeid=t.id and t.typelevel=3
+        group by tn.travelnotetypeid
+        order by sumlikecount desc
+        limit 10
+    </select>
 </mapper>

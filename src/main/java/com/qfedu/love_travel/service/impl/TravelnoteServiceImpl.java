@@ -38,4 +38,9 @@ public class TravelnoteServiceImpl extends ServiceImpl<TravelnoteMapper, Traveln
     public List<Travelnote> findTopFive() {
         return travelnoteMapper.selectTopFive();
     }
+
+    @Override
+    public List<Travelnote> findTopTen() {
+        return travelnoteMapper.selectTopTen();
+    }
 }

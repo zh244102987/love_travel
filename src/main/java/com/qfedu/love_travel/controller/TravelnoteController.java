@@ -40,5 +40,11 @@ public class TravelnoteController {
         return R.setOK("OK", travelnoteService.findTopFive());
     }
 
+    @GetMapping("/findTopTen.do")
+    @ApiOperation(value = "查询点赞数前十的游记城市")
+    public R findTopTen() {
+        return R.setOK("OK", travelnoteService.findTopTen());
+    }
+
 }
 
