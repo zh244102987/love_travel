@@ -2,7 +2,11 @@ package com.qfedu.love_travel.dao;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.qfedu.love_travel.entity.Destination;
 import com.qfedu.love_travel.entity.HoteltypeDest;
+import com.qfedu.love_travel.vo.VHotelTypeDest;
+
+import java.util.List;
 
 /**
  * <p>
@@ -14,4 +18,7 @@ import com.qfedu.love_travel.entity.HoteltypeDest;
  */
 public interface HoteltypeDestMapper extends BaseMapper<HoteltypeDest> {
 
+    List<VHotelTypeDest> selectVDestByTid(Integer id);
+
+    List<Destination> selectDestByTid(Integer id);
 }

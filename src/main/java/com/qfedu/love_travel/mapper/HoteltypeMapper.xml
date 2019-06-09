@@ -10,4 +10,11 @@
         <result column="hoteltypelevel" property="hoteltypelevel" />
     </resultMap>
 
+    <select id="selectAllByPName" parameterType="string" resultType="com.qfedu.love_travel.entity.Hoteltype">
+        select c.* from hoteltype c
+        inner join hoteltype p
+        on c.pid = p.id
+        where p.name=#{pname}
+        and p.hoteltypelevel=1;
+    </select>
 </mapper>
