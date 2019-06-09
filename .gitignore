@@ -30,3 +30,4 @@ HELP.md
 
 ### SpringBoot ###
 *.yml
+/src/main/resources/application.yml

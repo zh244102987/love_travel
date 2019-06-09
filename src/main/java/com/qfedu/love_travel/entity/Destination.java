@@ -37,6 +37,10 @@ public class Destination implements Serializable {
      * 目的地等级
      */
     private Integer destlevel;
+    /**
+     * 封面链接
+     */
+    private String imgurl;
 
 
     public Integer getId() {
@@ -69,6 +73,14 @@ public class Destination implements Serializable {
 
     public void setDestlevel(Integer destlevel) {
         this.destlevel = destlevel;
+    }
+
+    public String getImgurl(){
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl){
+        this.imgurl = imgurl;
     }
 
     @Override

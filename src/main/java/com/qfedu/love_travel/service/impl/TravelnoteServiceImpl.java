@@ -1,11 +1,15 @@
 package com.qfedu.love_travel.service.impl;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.qfedu.love_travel.dao.TravelnoteMapper;
 import com.qfedu.love_travel.entity.Travelnote;
 import com.qfedu.love_travel.service.TravelnoteService;
+import com.qfedu.love_travel.vo.VTravelNote;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -18,4 +22,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class TravelnoteServiceImpl extends ServiceImpl<TravelnoteMapper, Travelnote> implements TravelnoteService {
 
+    @Autowired(required = false)
+    private TravelnoteMapper travelnoteMapper;
+
+    @Transactional(readOnly = true)
+    @Override
+    public Page<VTravelNote> findTravelNoteByPage(Integer pageNum, Integer size) {
+//        Page<VTravelNote> page = new Page<>(pageNum, size);
+        Page<VTravelNote> page = new Page<>(1, 5);
+        return page.setRecords(travelnoteMapper.selectAllTravelNote(page));
+    }
 }
