@@ -8,6 +8,7 @@
         <result column="name" property="name" />
         <result column="pid" property="pid" />
         <result column="destlevel" property="destlevel" />
+        <result column="imgurl" property="imgurl" />
     </resultMap>
 
 </mapper>
