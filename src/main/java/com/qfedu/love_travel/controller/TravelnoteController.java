@@ -34,5 +34,11 @@ public class TravelnoteController {
         return R.setOK("OK", travelnoteService.findByPage(currentPage, size));
     }
 
+    @GetMapping("/findTopFive.do")
+    @ApiOperation(value = "查询评论前五的游记图片和区域信息")
+    public R findTopFive() {
+        return R.setOK("OK", travelnoteService.findTopFive());
+    }
+
 }
 

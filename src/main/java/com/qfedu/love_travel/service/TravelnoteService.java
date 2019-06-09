@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.qfedu.love_travel.entity.Travelnote;
 import com.qfedu.love_travel.vo.VTravelNote;
 
+import java.util.List;
+
 /**
  * <p>
  * 游记 服务类
@@ -23,5 +25,11 @@ public interface TravelnoteService extends IService<Travelnote> {
      * @return
      */
     public Page<VTravelNote> findByPage(Integer currentPage, Integer size);
+
+    /**
+     * 查询浏览数前五的游记信息,供攻略页面幻灯片模块使用
+     * @return
+     */
+    public List<Travelnote> findTopFive();
 
 }

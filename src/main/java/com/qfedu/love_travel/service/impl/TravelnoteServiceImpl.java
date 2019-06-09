@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * <p>
  * 游记 服务实现类
@@ -30,5 +32,10 @@ public class TravelnoteServiceImpl extends ServiceImpl<TravelnoteMapper, Traveln
     public Page<VTravelNote> findByPage(Integer currentPage, Integer size) {
         Page<VTravelNote> page = new Page<>(currentPage, size);
         return page.setRecords(travelnoteMapper.selectAll(page));
+    }
+
+    @Override
+    public List<Travelnote> findTopFive() {
+        return travelnoteMapper.selectTopFive();
     }
 }

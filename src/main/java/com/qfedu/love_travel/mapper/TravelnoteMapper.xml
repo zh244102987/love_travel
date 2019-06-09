@@ -24,4 +24,10 @@
         inner join travelnotetype tt
         on tt.id=t.travelnotetypeid
     </select>
+
+    <select id="selectTopFive" resultMap="BaseResultMap">
+      select id, sketchimgurl, travelnotetypeid
+      from travelnote
+      order by browsecount desc limit 5
+    </select>
 </mapper>

@@ -29,4 +29,5 @@ public interface TravelnotetypeMapper extends BaseMapper<Travelnotetype> {
      * @return
      */
     public List<VTravelNoteTypeInfo> selectAllTypeInfo();
+
 }

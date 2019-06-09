@@ -24,4 +24,10 @@ public interface TravelnoteMapper extends BaseMapper<Travelnote> {
      * @return
      */
     public List<VTravelNote> selectAll(Page page);
+
+    /**
+     * 查询浏览数前五的游记信息
+     * @return
+     */
+    public List<Travelnote> selectTopFive();
 }
