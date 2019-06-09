@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Date;
 import java.util.List;
 
 
@@ -46,8 +47,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             String loginpassword = user.getLoginpassword();
             String md5 = this.md5.EncoderByMd5(loginpassword);
             user.setLoginpassword(md5);
-            userMapper.addUser(user);
-
         }
     }
 
