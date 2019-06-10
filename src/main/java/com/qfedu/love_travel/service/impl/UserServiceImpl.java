@@ -63,7 +63,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 throw new RuntimeException("验证码错误");
             }
             if(code == null || code.equals("")){
-                throw new RuntimeException("亲填写验证码");
+                throw new RuntimeException("亲，填写验证码");
             }
             String loginpassword = user.getLoginpassword();
             String md5 = this.md5.EncoderByMd5(loginpassword);
@@ -79,6 +79,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
 
 
+    }
+
+    @Override
+    public User findByPhone(String phone) {
+        return userMapper.selectByPhone(phone);
     }
 
 }

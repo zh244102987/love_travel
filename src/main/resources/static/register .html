@@ -68,9 +68,14 @@
             success:function(data) {
                 if(data.code == 1) {
                     //跳转到list。jsp界面
-                    alert("注册成功");
-                } else {
-                    alert(data.info);
+                    var login = window.confirm("您已注册成功，是否返回登录");
+                    if(login){
+                        window.location.href="login.html"
+
+                    }else{
+                        window.location.href="index.html"
+                    }
+
                 }
             }
         });

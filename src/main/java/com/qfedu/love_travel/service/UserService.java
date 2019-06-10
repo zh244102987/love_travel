@@ -19,5 +19,7 @@ public interface UserService extends IService<User> {
 
     public void addUser(User user, String code, String loginpassword1) throws UnsupportedEncodingException, NoSuchAlgorithmException;
 
+    public User findByPhone(String phone);
+
 
 }

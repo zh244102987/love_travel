@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>旅游攻略,自由行,自助游攻略,旅游社交分享网站 - 爱乐旅游</title>
@@ -10,7 +10,8 @@
     <link href="css/core.css" rel="stylesheet" type="text/css"/>
 
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
-
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.1.js"></script>
 
     <script language="javascript" src="js/jquery-1.8.1.js" type="text/javascript" crossorigin="anonymous"></script>
 
@@ -89,10 +90,9 @@
                 <li class="head-nav-choice _j_head_nav_choice" data-cs-p="choice" data-tab-item="爱乐旅行者之选"><a href="#">
                     <div class="mfwzx-logo"></div>
                 </a></li>
+            
 
-                <a id="denglu" title="登录马蜂窝" href="login.html" rel="nofollow">登录</a>
-                <a id="zhuche" href="register%20.html" title="注册帐号" rel="nofollow">注册</a>
-
+                <img id="images" v-bind:src="headimgurl" height="32" width="32" alt="闫海涛的窝">
 
 
             </ul>
@@ -1416,4 +1416,43 @@
 </div>
 
 </body>
+
+<!--<script type="text/javascript">
+    $(function() {
+        $.ajax({
+            type:"get",
+            url:"/user/query.do?id=1",
+            dataType:"json",
+            success:function(data){
+                if(data.code == 1){
+                    var infos = data.data;
+                    alert(infos.headimgurl);
+
+                }
+            }
+        })
+    })
+</script>-->
+<script >
+
+    var vue = new Vue({
+        el: '#div1',
+        data:{
+            topFive:{}
+        },
+        created:function() {
+            this.getTopFive();
+        },
+        methods:{
+            getTopFive:function () {
+                var _this = this;
+                axios.get("/travelnote/findTopFive.do").then(function(response){
+                    alert(response.data.code);
+                    _this.topFive = response.data.data;
+                });
+            },
+        }
+    })
+
+</script>
 </html>

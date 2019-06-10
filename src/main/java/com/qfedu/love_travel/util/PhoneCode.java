@@ -9,13 +9,16 @@ import com.aliyuncs.exceptions.ServerException;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.servlet.http.HttpSession;
 
 public class PhoneCode {
 
     public static String code ;
+
+    public static void main(String[] args) {
+
+        getPhonemsg("15071121173");
+    }
 
     /**
      * 阿里云短信服务配置
