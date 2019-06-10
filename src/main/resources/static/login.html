@@ -114,8 +114,8 @@
             success:function(data){
                 if(data.code == 1){
 
-                    window.location.href="registerindex.html?id="+data.id;
-                    alert(data.code)
+                    window.location.href="registerindex.html?id="+data.data.id;
+                    alert(data.data.id)
 
 
                 }else{

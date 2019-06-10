@@ -12,6 +12,7 @@
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/vue.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.1.js"></script>
+    <script type="text/javascript" src="js/axios.js"></script>
 
     <script language="javascript" src="js/jquery-1.8.1.js" type="text/javascript" crossorigin="anonymous"></script>
 
@@ -87,12 +88,13 @@
                 </li>
                 <li class="head-nav-app _j_head_nav_app" data-cs-p="app" data-tab-item="APP"><a href="#"
                                                                                                 title="APP">APP</a></li>
-                <li class="head-nav-choice _j_head_nav_choice" data-cs-p="choice" data-tab-item="爱乐旅行者之选"><a href="#">
-                    <div class="mfwzx-logo"></div>
-                </a></li>
-            
+                <li id ="img" class="head-nav-choice _j_head_nav_choice" data-cs-p="choice" data-tab-item="爱乐旅行者之选"><a href="#">
+                    <div class="mfwzx-logo"> </div>
 
-                <img id="images" v-bind:src="headimgurl" height="32" width="32" alt="闫海涛的窝">
+
+                </a></li>
+
+
 
 
             </ul>
@@ -1417,23 +1419,26 @@
 
 </body>
 
-<!--<script type="text/javascript">
+<script type="text/javascript">
     $(function() {
         $.ajax({
             type:"get",
-            url:"/user/query.do?id=1",
+            url:"/user/query.do"+ window.location.search,
             dataType:"json",
             success:function(data){
                 if(data.code == 1){
                     var infos = data.data;
-                    alert(infos.headimgurl);
+                    var html = '  <img src="'+infos.headimgurl+'" height="32" width="32" alt=""><span>' + infos.realname+",欢迎回来" +'</span>';
+
+
+                    $("#img").append($(html));
 
                 }
             }
         })
     })
-</script>-->
-<script >
+</script>
+<!--<script >
 
     var vue = new Vue({
         el: '#div1',
@@ -1442,17 +1447,22 @@
         },
         created:function() {
             this.getTopFive();
+
         },
         methods:{
             getTopFive:function () {
                 var _this = this;
-                axios.get("/travelnote/findTopFive.do").then(function(response){
-                    alert(response.data.code);
-                    _this.topFive = response.data.data;
+                axios.get("/user/query.do"+window.location.search).then(function(data) {
+
+                    _this.topFive = data.data.headimgurl;
+                    alert(data.data.headimgurl);
+
                 });
+                alert(data.data.headimgurl);
             },
+
         }
     })
 
-</script>
+</script>-->
 </html>
