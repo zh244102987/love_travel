@@ -10,4 +10,21 @@
         <result column="pid" property="pid" />
     </resultMap>
 
+    <resultMap id="supportMap" type="com.qfedu.love_travel.vo.VHotelsupporting">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <collection property="supportingList" javaType="java.util.ArrayList" ofType="com.qfedu.love_travel.entity.Hotelsupporting">
+            <id column="cid" property="id" />
+            <result column="cname" property="name" />
+        </collection>
+    </resultMap>
+
+    <select id="selectByInfoid" parameterType="int" resultMap="supportMap">
+      select p.id,p.name,c.id cid,c.name cname from hotelsupporting p
+      inner join hotelsupporting c
+      on c.pid=p.id
+      inner join hoteldetail_supporting hs
+      on hs.supportingid=c.id
+      where hs.hoteldetailid=#{hoteldetailid};
+    </select>
 </mapper>

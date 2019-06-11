@@ -10,7 +10,7 @@
     </resultMap>
 
     <select id="selectVDestByTid" parameterType="int" resultType="com.qfedu.love_travel.vo.VHotelTypeDest">
-		select d.*,p.name as 'pname' from hoteltype_dest t
+		select d.id,d.name,p.name as 'pname' from hoteltype_dest t
         inner join destination d
         on t.destid = d.id
 		inner join destination p

@@ -67,7 +67,6 @@ public class HoteltypeServiceImpl extends ServiceImpl<HoteltypeMapper, Hoteltype
 
         Map<String, Object> cloumnMap = new HashMap<>();
         cloumnMap.put("name", "特价酒店");
-        cloumnMap.put("level", 1);
 
         List<Hoteltype> types = hoteltypeMapper.selectByMap(cloumnMap);
 

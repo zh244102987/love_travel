@@ -11,4 +11,12 @@
         <result column="info" property="info" />
     </resultMap>
 
+    <select id="selectAllCommentByDetailId" resultType="com.qfedu.love_travel.vo.VHotelComment">
+        select c.id, c.hoteldetailid, c.userid, c.createtime, c.info, u.realname, u.headimgurl
+        from hotelcomment c
+        inner join user u
+        on u.id=c.userid
+        where c.hoteldetailid=#{detailId}
+        order by c.createtime asc
+    </select>
 </mapper>

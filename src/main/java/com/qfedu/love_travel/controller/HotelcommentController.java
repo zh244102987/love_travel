@@ -13,8 +13,9 @@ import org.springframework.stereotype.Controller;
  * @author hai123
  * @since 2019-06-06
  */
-@Controller
+@RestController
 @RequestMapping("/hotelcomment")
+@Api(value = "查询酒店评论的接口", tags = "查询酒店评论的数据接口")
 public class HotelcommentController {
 
 }

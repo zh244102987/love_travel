@@ -1,24 +1,14 @@
 package com.qfedu.love_travel.controller;
 
-
 import com.qfedu.love_travel.entity.User;
 import com.qfedu.love_travel.service.UserService;
-import com.qfedu.love_travel.util.MD5;
 import com.qfedu.love_travel.util.PhoneCode;
-import com.qfedu.love_travel.util.StaticPeram;
 import com.qfedu.love_travel.vo.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 
@@ -29,9 +19,6 @@ public class UserConteoller {
 
     @Autowired(required = false)
     UserService userService;
-
-
-   // PhoneCode phoneCode = new PhoneCode();
 
 
     @ApiOperation(value = "查询所有用户")
