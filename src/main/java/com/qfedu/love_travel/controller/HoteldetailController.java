@@ -28,7 +28,7 @@ public class HoteldetailController {
     private HoteldetailService hoteldetailService;
 
     @GetMapping("/detail.do")
-    @ApiOperation(value = "根据酒店详情id查询酒店详情")
+    @ApiOperation(value = "根据酒店详情id查询酒店详情以及酒店配套设施")
     public R getHotelDetailByHotelId(Integer hotelId){
        VHotelInfo hotelInfo = hoteldetailService.findAllInfoByHotelId(hotelId);
 

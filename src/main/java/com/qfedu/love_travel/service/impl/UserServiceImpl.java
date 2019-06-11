@@ -49,6 +49,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
         String code1 = PhoneCode.code;
 
+
         User user1 = userMapper.selectByPhone(user.getPhone());
         if (user1 != null){
             throw new RuntimeException("账号已存在");

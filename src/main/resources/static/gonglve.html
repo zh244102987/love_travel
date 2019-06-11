@@ -328,318 +328,34 @@
 
 
             </div>
-            <div class="gl-post">
-                <div data-cs-t="gonglve_feed" class="_j_feed_data" data-feed=[{"fid":"3095","type":"6"},{"fid":"65342","type":"3"},{"fid":"203110","type":"3"},{"fid":"16177","type":"3"},{"fid":"19270","type":"1"},{"fid":"131770","type":"1"},{"fid":"232990","type":"3"},{"fid":"30415","type":"1"},{"fid":"234790","type":"3"},{"fid":"15748","type":"3"}]>
-                    <div class="feed-item _j_feed_item" data-fid="3095" data-type="6" data-cs-p="位置_1">
-                        <a href="http://www.mafengwo.cn/mdd/cityroute/10035_237.html" target="_blank">
+            <div class="gl-post" id="glList">
+                <div data-cs-t="gonglve_feed" class="_j_feed_data" data-feed=[]>
+                    <div v-for="item in noteList.records" class="feed-item _j_feed_item" data-fid="" data-type="" data-cs-p="">
+                        <a :href="item.id" target="_blank">
                             <div class="bar clearfix">
                                 <span class="stat"><em>38%</em> 蜂蜂会选择这条线路</span>
-                                <span class="type"><i class="icon-line"></i>来自 <strong>目的地专家</strong></span>
+                                <span class="type"><i class="icon-line"></i>来自 <strong>哪里</strong></span>
                             </div>
                             <div class="title">
-                                成都市区4日经典玩法
+                                {{item.title}}
                             </div>
 
                             <dl class="art clearfix">
                                 <dt>
-                                    <img src="http://p2-q.mafengwo.net/s9/M00/EC/39/wKgBs1cGCW2AAe7qAADbUHkFlIE889.png?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" style="width: 220px;">
+                                    <img :src="item.sketchimgurl" style="width: 220px;">
                                 </dt>
                                 <dd>
                                     <div class="info txt-line">
-                                        按照景点的热度和位置来安排，是一条经典的线路，能更全面的了解成都市区。
-                                        <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        宽窄巷子
-                                        <span class="arrow"></span>
-                                        武侯祠
-                                        <span class="arrow"></span>
-                                        锦里
-                                        <span class="arrow"></span>
-                                        金沙遗址博物馆
-                                        <span class="arrow"></span>
-                                        杜甫草堂
-                                        <span class="arrow"></span>
-                                        青羊宫
-                                        <span class="arrow"></span>
-                                        九眼桥
-                                        <span class="arrow"></span>
-                                        成都大熊猫繁育研究基地
-                                        <span class="arrow"></span>
-                                        文殊院
-                                        <span class="arrow"></span>
-                                        春熙路
-
+                                        {{item.summary}}
                                     </div>
-                                    <span class="art-tag">最佳季节：3-6月，9-11月</span>
-                                    <div class="ext-r"><span class="nums">2869721浏览，442评论</span></div>
+                                    <div class="ext-r"><span class="nums">{{item.browsecount}}浏览，{{item.commentcount}}评论</span></div>
                                 </dd>
                             </dl>
                         </a>
+                        <div class="hr"></div>
                     </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="65342" data-type="3" data-cs-p="位置_2">
-                        <a href="https://www.mafengwo.cn/gonglve/ziyouxing/80406.html?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">16</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                一入夜，便长安 | 西安夜游的正确打开方式
-                            </div>
-                            <div class="txt">
-                                <div class="info">很多城市，都有夜景。白天与夜晚，浓妆淡抹总相宜。西安的城市，只有上了夜妆，才更美丽。
-                                    西安人，太眷恋历史的味道，和长安的美。灯火阑珊处，来一场贵族的微服私访。</div>
 
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://n1-q.mafengwo.net/s11/M00/BC/FA/wKgBEFrNybyANkiVAATFOr7II8w06.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://p4-q.mafengwo.net/s11/M00/ED/84/wKgBEFrHNUWAVRcZAANk_Otq56880.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://b2-q.mafengwo.net/s11/M00/76/74/wKgBEFrVX2KAYGl-AAGsEHojgeQ93.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">108194浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="203110" data-type="3" data-cs-p="位置_3">
-                        <a href="https://www.mafengwo.cn/gonglve/ziyouxing/137743.html?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">0</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                老皇城VS新帝都，北京5日经典线路
-                            </div>
-                            <div class="txt">
-                                <div class="info">经典5日线路，囊括了老北京的市井百态，新北京的时尚潮文化。</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://b4-q.mafengwo.net/s11/M00/A9/D7/wKgBEFtjvqyAcMTcAAEeT9ZcM0g95.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://b3-q.mafengwo.net/s11/M00/1D/D4/wKgBEFti8K-AH32gAAPQSLBChzQ11.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://b1-q.mafengwo.net/s11/M00/1E/D0/wKgBEFti8cKAfSkEAAH6Xly24yI10.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">689844浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="16177" data-type="3" data-cs-p="位置_4">
-                        <a href="https://www.mafengwo.cn/localdeals/mdd_topic_2684/?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">27</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                浮潜干货攻略，小白入门必看
-                            </div>
-                            <div class="txt">
-                                <div class="info">几乎所有人到海岛旅游，最渴望的就是和大海亲密接触。而浮潜，就能提供一个绝好的机会，你只需要漂浮在海面上将脸部沉入水里，通过一根伸出海面的短管来呼吸，就能尽情地观赏海底的鱼群和珊瑚，如果浮潜的同时用水下相机记录这些美丽的画面，那就更棒啦。</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://n2-q.mafengwo.net/s10/M00/E6/D5/wKgBZ1i1XByAQdhyAAD8_zO76I075.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://p1-q.mafengwo.net/s10/M00/E6/CD/wKgBZ1i1XAaAdR_VAACtIMzB4fQ65.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://p1-q.mafengwo.net/s10/M00/E7/06/wKgBZ1i1XJGAb6myAADiSQrzsUg90.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">80767浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="19270" data-type="1" data-cs-p="位置_5">
-                        <a href="https://www.mafengwo.cn/i/6142139.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">953</span> 蜂蜂顶<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-line"></i>来自 <strong>游记</strong></span>
-                            </div>
-                            <div class="title">
-                                华欣葡萄酒庄－－梦开始的地方
-                            </div>
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://b2-q.mafengwo.net/s9/M00/06/B8/wKgBs1ftQYGAQNqRAAXqMkfHMG480.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" style="width: 220px;">
-                                </dt>
-                                <dd>
-                                    <div class="info">华欣像一个梦，
-                                        像一朵芍药柔和的盛开着，
-
-                                        之所以是梦开始的地方，上一次相遇是在三年前，无意间留意到了曼谷附近的一座海滨小镇。国王的常年避暑行宫设在此处。
-
-                                        此后对华欣留下了深深的印记，真的有一种“你存在我深深的脑海里，我的梦里”。
-
-
-
-                                        此行由于时间关系，行程中并没有安排华欣。可由于我的执念，安排了一人...</div>
-                                    <div class="ext-r"><span class="author"><img src="http://n1-q.mafengwo.net/s10/M00/96/0A/wKgBZ1joULuAYW0eAACSD2HyRTo09.jpeg?imageMogr2%2Fthumbnail%2F%2148x48r%2Fgravity%2FCenter%2Fcrop%2F%2148x48%2Fquality%2F90">枕頭下的雜貨店</span><span class="nums">25529浏览，92评论</span></div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="131770" data-type="1" data-cs-p="位置_6">
-                        <a href="https://www.mafengwo.cn/i/11398822.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">22</span> 蜂蜂顶<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-line"></i>来自 <strong>游记</strong></span>
-                            </div>
-                            <div class="title">
-                                假日魔都＼上海环游记
-                            </div>
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://p1-q.mafengwo.net/s12/M00/4D/6C/wKgED1wRxh-AYfxIAAY_HgTihn086.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" style="width: 220px;">
-                                </dt>
-                                <dd>
-                                    <div class="info">DAY1，M50创意园
-                                        中午9:19杭州东的火车把我带到了11:06的上海南
-                                        旅程就这样开始了
-
-                                        因为提着行李箱所以先去了青旅
-                                        青旅是美团上订的，位置就在外滩边上，走路只要10分钟左右就可以到达外滩了，附近都是一些大酒店，一条街过去都是吃饭的店面，感觉这个青旅...</div>
-                                    <div class="ext-r"><span class="author"><img src="http://b2-q.mafengwo.net/s10/M00/FD/33/wKgBZ1k0x6WAIW3KAAB1wPMNefc00.jpeg?imageMogr2%2Fthumbnail%2F%2148x48r%2Fgravity%2FCenter%2Fcrop%2F%2148x48%2Fquality%2F90">蟹山山</span><span class="nums">1892浏览，2评论</span></div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="232990" data-type="3" data-cs-p="位置_7">
-                        <a href="https://www.mafengwo.cn/gonglve/ziyouxing/277054.html?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">0</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                2019年 | 长岛最新旅游攻略
-                            </div>
-                            <div class="txt">
-                                <div class="info">海山仙山&amp;生态长岛赶快收藏，让我们一起相约山东长岛！</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://b1-q.mafengwo.net/s11/M00/94/47/wKgBEFz08pOAUbHnAAI_fpCmY-874.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://p2-q.mafengwo.net/s1/M00/5A/0E/wKgIC1z07rWARILyABNGFrSDmy0129.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://b4-q.mafengwo.net/s1/M00/5A/1A/wKgIC1z07r6AeJ_qADlj26fmqtM664.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">377浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="30415" data-type="1" data-cs-p="位置_8">
-                        <a href="https://www.mafengwo.cn/i/7290185.html" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">784</span> 蜂蜂顶<i class="icon-hand"></i></span>
-                                <span class="type"><i class="icon-line"></i>来自 <strong>游记</strong></span>
-                            </div>
-                            <div class="title">
-                                梦里千回，终见西域—新疆九日游
-                            </div>
-                            <dl class="art clearfix">
-                                <dt>
-                                    <img src="http://p2-q.mafengwo.net/s10/M00/62/13/wKgBZ1l26iWAKMnzAAE0FXDGs0k42.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100" style="width: 220px;">
-                                </dt>
-                                <dd>
-                                    <div class="info">不到新疆，不知道中国有多大，不到新疆，不知道中国有多美，而只有到了新疆的喀什，你才算是真正的走进了新疆。这次旅行，去到了心心念念的喀什，去到了传说中的“世界屋脊”帕米尔高原，也去到了世界上海拔最高的国门“红其拉甫”。 去新疆旅行，跟去国内...</div>
-                                    <div class="ext-r"><span class="author"><img src="http://n1-q.mafengwo.net/s12/M00/35/98/wKgED1uqIreAU9QZAAAXHQMBZ74008.png?imageMogr2%2Fthumbnail%2F%2148x48r%2Fgravity%2FCenter%2Fcrop%2F%2148x48%2Fquality%2F90">马蜂窝用户</span><span class="nums">24975浏览，154评论</span></div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="234790" data-type="3" data-cs-p="位置_9">
-                        <a href="https://www.mafengwo.cn/gonglve/ziyouxing/277798.html?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">0</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                2019年 | 长岛旅游攻略（官宣珍藏版）
-                            </div>
-                            <div class="txt">
-                                <div class="info">海山仙山&amp;生态长岛
-
-                                    2019年长岛最新旅游攻略官宣发布，赶快收藏，让我们一起相约山东长岛！</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://n1-q.mafengwo.net/s14/M00/E7/90/wKgE2lz5w-OAYu9qAAE8u6dqvYc87.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://p2-q.mafengwo.net/s1/M00/5A/0E/wKgIC1z07rWARILyABNGFrSDmy0129.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://b4-q.mafengwo.net/s1/M00/5A/1A/wKgIC1z07r6AeJ_qADlj26fmqtM664.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">3475浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <div class="feed-item _j_feed_item" data-fid="15748" data-type="3" data-cs-p="位置_10">
-                        <a href="https://www.mafengwo.cn/localdeals/mdd_topic_2321/?cid=1010616" target="_blank">
-                            <div class="bar clearfix">
-                                <span class="stat"><span class="num">180</span> 蜂蜂体验过<i class="icon-cart"></i></span>
-                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
-                            </div>
-                            <div class="title">
-                                近几年绝不能错过的7个“免签”海岛都在这里！
-                            </div>
-                            <div class="txt">
-                                <div class="info">想出国但又嫌签证麻烦？想去海岛但时间总是不能提前确定？别愁，我们还有“免签”海岛可以去呀！买张机票，说走就走， 不用太提前做准备，还能出国享受美美的自然风光，拥抱蓝天大海和阳光。你还在犹豫什么呢？</div>
-
-
-
-
-
-                            </div>
-                            <div class="imgs">
-                                <ul class="clearfix">
-                                    <li><img src="http://b4-q.mafengwo.net/s10/M00/70/92/wKgBZ1ivnyCAGfGoAAFVsJxx1ak65.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://p3-q.mafengwo.net/s10/M00/DF/F3/wKgBZ1idmCiAaA4RAAGM2JB_aYM45.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li><img src="http://p4-q.mafengwo.net/s7/M00/C2/A5/wKgB6lPk-RiAdeU7AA9oGW0HrI009.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
-                                    <li class="ext-r">281339浏览</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hr"></div>
-                    <a rel="nofollow" data-page="1" class="_j_page_loader" data-cs-p="加载更多_1"><span>加载更多</span><i></i></a>
+                    <a rel="nofollow" data-page="1" class="_j_page_loader" data-cs-p="加载更多_1" @click="addMore"><span>加载更多</span><i></i></a>
                 </div>
             </div>
         </div>
@@ -1304,6 +1020,35 @@
                     _this.types = response.data.data;
                 });
             },
+        }
+    })
+
+    // 请求游记信息
+    var vueglList = new Vue({
+        el: '#glList',
+        data:{
+            noteList:{},
+            currentPage:1,
+        },
+        created:function() {
+            this.getNoteList();
+        },
+        methods:{
+            getNoteList:function () {
+                var _this = this;
+                axios.get("/travelnote/findByPage.do?currentPage="+_this.currentPage+"&size=10").then(function(response){
+                    _this.noteList = response.data.data;
+                });
+            },
+            addMore:function() {
+                var _this = this;
+                _this.currentPage += 1;
+                axios.get("/travelnote/findByPage.do?currentPage="+_this.currentPage+"&size=10").then(function(response){
+                    _this.noteList.records = _this.noteList.records.concat(response.data.data.records);
+                    _this.noteList.current = response.data.data.current;
+                });
+
+            }
         }
     })
 
