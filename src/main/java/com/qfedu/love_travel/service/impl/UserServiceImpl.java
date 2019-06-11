@@ -7,15 +7,10 @@ import com.qfedu.love_travel.service.UserService;
 import com.qfedu.love_travel.util.MD5;
 import com.qfedu.love_travel.util.PhoneCode;
 import com.qfedu.love_travel.util.StaticPeram;
-import com.qfedu.love_travel.vo.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Date;
-import java.util.List;
 
 
 @Service
@@ -36,6 +31,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User user = userMapper.selectByPhone(phone);
         if(user == null){
             throw new RuntimeException("账户不存在");
+        }
+        if(user.equals("")){
+            throw new RuntimeException("请输入账号");
         }
         if(!md5.checkpassword(loginpassword,user.getLoginpassword())){
             throw new RuntimeException("密码错误");
