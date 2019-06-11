@@ -46,5 +46,22 @@ public class TravelnoteController {
         return R.setOK("OK", travelnoteService.findTopTen());
     }
 
+    @GetMapping("/findOverseasTopTen.do")
+    @ApiOperation(value = "查询国外游记浏览数前十的游记信息")
+    public R findOverseasTopTen() {
+        return R.setOK("OK", travelnoteService.findOverseasTopTen());
+    }
+
+    @GetMapping("/findDomesticTopTen.do")
+    @ApiOperation(value = "查询国内游记浏览数前十的游记信息")
+    public R findDomesticTopTen() {
+        return R.setOK("OK", travelnoteService.findDomesticTopTen());
+    }
+
+    @GetMapping("/findSubjectTopTen.do")
+    @ApiOperation(value = "查询主题游记浏览数前十的游记信息")
+    public R findSubjectTopTen() {
+        return R.setOK("OK", travelnoteService.findSubjectTopTen());
+    }
 }
 

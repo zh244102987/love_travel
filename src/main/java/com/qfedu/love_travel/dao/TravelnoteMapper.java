@@ -36,4 +36,22 @@ public interface TravelnoteMapper extends BaseMapper<Travelnote> {
      * @return
      */
     public List<Travelnote> selectTopTen();
+
+    /**
+     * 国外游记浏览量前十
+     * @return
+     */
+    public List<VTravelNote> selectOverseasTopTen();
+
+    /**
+     * 国内游记浏览量前十
+     * @return
+     */
+    public List<VTravelNote> selectDomesticTopTen();
+
+    /**
+     * 主题游记浏览量前十
+     * @return
+     */
+    public List<VTravelNote> selectSubjectTopTen();
 }

@@ -18,7 +18,7 @@ import java.util.List;
  * 游记 服务实现类
  * </p>
  *
- * @author hai123
+ * @author 段继亮
  * @since 2019-06-06
  */
 @Service
@@ -42,5 +42,20 @@ public class TravelnoteServiceImpl extends ServiceImpl<TravelnoteMapper, Traveln
     @Override
     public List<Travelnote> findTopTen() {
         return travelnoteMapper.selectTopTen();
+    }
+
+    @Override
+    public List<VTravelNote> findOverseasTopTen() {
+        return travelnoteMapper.selectOverseasTopTen();
+    }
+
+    @Override
+    public List<VTravelNote> findDomesticTopTen() {
+        return travelnoteMapper.selectDomesticTopTen();
+    }
+
+    @Override
+    public List<VTravelNote> findSubjectTopTen() {
+        return travelnoteMapper.selectSubjectTopTen();
     }
 }

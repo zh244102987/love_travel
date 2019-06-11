@@ -38,4 +38,22 @@ public interface TravelnoteService extends IService<Travelnote> {
      */
     public List<Travelnote> findTopTen();
 
+    /**
+     * 国外游记浏览量前十
+     * @return
+     */
+    public List<VTravelNote> findOverseasTopTen();
+
+    /**
+     * 国内游记浏览量前十
+     * @return
+     */
+    public List<VTravelNote> findDomesticTopTen();
+
+    /**
+     * 主题游记浏览量前十
+     * @return
+     */
+    public List<VTravelNote> findSubjectTopTen();
+
 }

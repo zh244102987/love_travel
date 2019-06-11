@@ -40,4 +40,46 @@
         order by sumlikecount desc
         limit 10
     </select>
+
+    <!-- 国外游记浏览量前十 -->
+    <select id="selectOverseasTopTen" resultType="com.qfedu.love_travel.vo.VTravelNote">
+        select t.id, t.title, ttt.name typename from travelnote t
+        inner join travelnotetype tt
+        on t.travelnotetypeid=tt.id
+        inner join travelnotetype ttt
+        on tt.pid=ttt.id
+        inner join travelnotetype tttt
+        on ttt.pid=tttt.id
+        where tttt.name = "国外"
+        order by t.browsecount desc
+        limit 10;
+    </select>
+
+    <!-- 国内游记浏览量前十 -->
+    <select id="selectDomesticTopTen" resultType="com.qfedu.love_travel.vo.VTravelNote">
+        select t.id, t.title, ttt.name typename from travelnote t
+        inner join travelnotetype tt
+        on t.travelnotetypeid=tt.id
+        inner join travelnotetype ttt
+        on tt.pid=ttt.id
+        inner join travelnotetype tttt
+        on ttt.pid=tttt.id
+        where tttt.name = "国内"
+        order by t.browsecount desc
+        limit 10;
+    </select>
+
+    <!-- 主题游记浏览量前十 -->
+    <select id="selectSubjectTopTen" resultType="com.qfedu.love_travel.vo.VTravelNote">
+        select t.id, t.title, ttt.name typename from travelnote t
+        inner join travelnotetype tt
+        on t.travelnotetypeid=tt.id
+        inner join travelnotetype ttt
+        on tt.pid=ttt.id
+        inner join travelnotetype tttt
+        on ttt.pid=tttt.id
+        where tttt.name = "主题"
+        order by t.browsecount desc
+        limit 10;
+    </select>
 </mapper>
