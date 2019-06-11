@@ -1,8 +1,10 @@
 package com.qfedu.love_travel.service;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.qfedu.love_travel.entity.Destination;
+import com.qfedu.love_travel.vo.VHotelTypeDest;
 
 /**
  * <p>
@@ -14,4 +16,5 @@ import com.qfedu.love_travel.entity.Destination;
  */
 public interface DestinationService extends IService<Destination> {
 
+    Page<VHotelTypeDest> findByCondition(String name, Integer currentPage, Integer size);
 }

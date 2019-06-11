@@ -3,6 +3,7 @@ package com.qfedu.love_travel.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.qfedu.love_travel.entity.Hoteldetail;
+import com.qfedu.love_travel.vo.VHotelInfo;
 
 /**
  * <p>
@@ -14,4 +15,5 @@ import com.qfedu.love_travel.entity.Hoteldetail;
  */
 public interface HoteldetailService extends IService<Hoteldetail> {
 
+    VHotelInfo findAllInfoByHotelId(Integer hotelId);
 }
