@@ -4,14 +4,15 @@ package com.qfedu.love_travel.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.qfedu.love_travel.entity.Travelnotecomment;
+import com.qfedu.love_travel.vo.VTravelNoteComment;
 
 /**
  * <p>
  * 游记评论 服务类
  * </p>
  *
- * @author hai123
- * @since 2019-06-06
+ * @author 段继亮
+ * @since 2019-06-10
  */
 public interface TravelnotecommentService extends IService<Travelnotecomment> {
 
@@ -22,6 +23,6 @@ public interface TravelnotecommentService extends IService<Travelnotecomment> {
      * @param noteId 游记编号
      * @return
      */
-    public Page<Travelnotecomment> findAllCommentByNoteId(Integer currentPage, Integer size, Integer noteId);
+    public Page<VTravelNoteComment> findAllCommentByNoteId(Integer currentPage, Integer size, Integer noteId);
 
 }
