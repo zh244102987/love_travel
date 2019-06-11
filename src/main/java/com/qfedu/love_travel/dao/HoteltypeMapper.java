@@ -16,5 +16,5 @@ import java.util.List;
  */
 public interface HoteltypeMapper extends BaseMapper<Hoteltype> {
 
-    List<Hoteltype> selectAllByPName(String pTypename);
+    List<Hoteltype> selectAllByPName(String pname);
 }
