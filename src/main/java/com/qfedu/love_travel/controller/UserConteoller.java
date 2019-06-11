@@ -57,6 +57,7 @@ public class UserConteoller {
     @GetMapping("/query.do")
     @CrossOrigin
     public R queryById(int id){
+
         return R.setOK("OK", userService.getById(id));
     }
 
