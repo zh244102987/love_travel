@@ -645,93 +645,13 @@
         </div>
         <div class="sidebar">
             <div class="side-hd">旅游攻略导航</div>
-            <div class="nav-drop">
-                <div class="drop-item">
-                    <div class="trigger"><i></i>国内</div>
+            <div class="nav-drop" id="noteType">
+                <div class="drop-item" v-for="items in types">
+                    <div class="trigger"><i></i>{{items.pname}}</div>
                     <div class="drop-pop">
                         <div class="inner">
                             <ul>
-                                <li><a href="/gonglve/mdd-sc-0-0-1.html#list" target="_blank">四川(27)</a></li>
-                                <li><a href="/gonglve/mdd-yn-0-0-1.html#list" target="_blank">云南(27)</a></li>
-                                <li><a href="/gonglve/mdd-js-0-0-1.html#list" target="_blank">江苏(26)</a></li>
-                                <li><a href="/gonglve/mdd-bj-0-0-1.html#list" target="_blank">北京(21)</a></li>
-                                <li><a href="/gonglve/mdd-zj-0-0-1.html#list" target="_blank">浙江(21)</a></li>
-                                <li><a href="/gonglve/mdd-gd-0-0-1.html#list" target="_blank">广东(19)</a></li>
-                                <li><a href="/gonglve/mdd-heb-0-0-1.html#list" target="_blank">河北(16)</a></li>
-                                <li><a href="/gonglve/mdd-tw-0-0-1.html#list" target="_blank">台湾(16)</a></li>
-                                <li><a href="/gonglve/mdd-gz-0-0-1.html#list" target="_blank">贵州(15)</a></li>
-                                <li><a href="/gonglve/mdd-sd-0-0-1.html#list" target="_blank">山东(15)</a></li>
-                                <li><a href="/gonglve/mdd-nm-0-0-1.html#list" target="_blank">内蒙古(14)</a></li>
-                                <li><a href="/gonglve/mdd-xz-0-0-1.html#list" target="_blank">西藏(13)</a></li>
-                                <li><a href="/gonglve/mdd-jx-0-0-1.html#list" target="_blank">江西(12)</a></li>
-                                <li><a href="/gonglve/mdd-gx-0-0-1.html#list" target="_blank">广西(11)</a></li>
-                                <li><a href="/gonglve/mdd-qh-0-0-1.html#list" target="_blank">青海(11)</a></li>
-                                <li><a href="/gonglve/mdd-hn-0-0-1.html#list" target="_blank">河南(10)</a></li>
-                                <li><a href="/gonglve/mdd-hlj-0-0-1.html#list" target="_blank">黑龙江(10)</a></li>
-                                <li><a href="/gonglve/mdd-xj-0-0-1.html#list" target="_blank">新疆(10)</a></li>
-                                <li><a href="/gonglve/mdd-ah-0-0-1.html#list" target="_blank">安徽(9)</a></li>
-                                <li><a href="/gonglve/mdd-fj-0-0-1.html#list" target="_blank">福建(9)</a></li>
-                                <li><a href="/gonglve/mdd-hainan-0-0-1.html#list" target="_blank">海南(9)</a></li>
-                                <li><a href="/gonglve/mdd-hub-0-0-1.html#list" target="_blank">湖北(9)</a></li>
-                                <li><a href="/gonglve/mdd-jl-0-0-1.html#list" target="_blank">吉林(9)</a></li>
-                                <li><a href="/gonglve/mdd-hunan-0-0-1.html#list" target="_blank">湖南(8)</a></li>
-                                <li><a href="/gonglve/mdd-s1x-0-0-1.html#list" target="_blank">山西(8)</a></li>
-                                <li><a href="/gonglve/mdd-s3x-0-0-1.html#list" target="_blank">陕西(8)</a></li>
-                                <li><a href="/gonglve/mdd-gs-0-0-1.html#list" target="_blank">甘肃(7)</a></li>
-                                <li><a href="/gonglve/mdd-ln-0-0-1.html#list" target="_blank">辽宁(6)</a></li>
-                                <li><a href="/gonglve/mdd-mc-0-0-1.html#list" target="_blank">澳门(4)</a></li>
-                                <li><a href="/gonglve/mdd-hk-0-0-1.html#list" target="_blank">香港(4)</a></li>
-                                <li><a href="/gonglve/mdd-cq-0-0-1.html#list" target="_blank">重庆(4)</a></li>
-                                <li><a href="/gonglve/mdd-sh-0-0-1.html#list" target="_blank">上海(3)</a></li>
-                                <li><a href="/gonglve/mdd-nx-0-0-1.html#list" target="_blank">宁夏(2)</a></li>
-                                <li><a href="/gonglve/mdd-tj-0-0-1.html#list" target="_blank">天津(2)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="drop-item">
-                    <div class="trigger"><i></i>国外</div>
-                    <div class="drop-pop">
-                        <div class="inner">
-                            <ul>
-                                <li><a href="/gonglve/mdd-oz-0-0-1.html#list" target="_blank">欧洲(102)</a></li>
-                                <li><a href="/gonglve/mdd-dny-0-0-1.html#list" target="_blank">东南亚(73)</a></li>
-                                <li><a href="/gonglve/mdd-bmz-0-0-1.html#list" target="_blank">北美洲(40)</a></li>
-                                <li><a href="/gonglve/mdd-dy-0-0-1.html#list" target="_blank">东亚(27)</a></li>
-                                <li><a href="/gonglve/mdd-dyz-0-0-1.html#list" target="_blank">大洋洲(23)</a></li>
-                                <li><a href="/gonglve/mdd-ny-0-0-1.html#list" target="_blank">南亚(20)</a></li>
-                                <li><a href="/gonglve/mdd-fz-0-0-1.html#list" target="_blank">非洲(17)</a></li>
-                                <li><a href="/gonglve/mdd-xy-0-0-1.html#list" target="_blank">西亚(7)</a></li>
-                                <li><a href="/gonglve/mdd-nmz-0-0-1.html#list" target="_blank">南美洲(3)</a></li>
-                                <li><a href="/gonglve/mdd-njz-0-0-1.html#list" target="_blank">南极洲(1)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="drop-item">
-                    <div class="trigger"><i></i>主题</div>
-                    <div class="drop-pop">
-                        <div class="inner">
-                            <ul>
-                                <li><a href="/gonglve/zt-1051-1-0-0.html#list"  target="_blank">数据报告(34)</a></li>
-                                <li><a href="/gonglve/zt-1049-0-0-0.html#list"  target="_blank">休闲(27)</a></li>
-                                <li><a href="/gonglve/zt-1037-0-0-0.html#list"  target="_blank">户外(18)</a></li>
-                                <li><a href="/gonglve/zt-1022-0-0-0.html#list"  target="_blank">文化(17)</a></li>
-                                <li><a href="/gonglve/zt-1046-0-0-0.html#list"  target="_blank">特别策划(15)</a></li>
-                                <li><a href="/gonglve/zt-1006-0-0-0.html#list"  target="_blank">美食(14)</a></li>
-                                <li><a href="/gonglve/zt-1027-0-0-0.html#list"  target="_blank">购物(12)</a></li>
-                                <li><a href="/gonglve/zt-1017-0-0-0.html#list"  target="_blank">自驾(11)</a></li>
-                                <li><a href="/gonglve/zt-1044-0-0-0.html#list"  target="_blank">节庆(11)</a></li>
-                                <li><a href="/gonglve/zt-1023-0-0-0.html#list"  target="_blank">必备(9)</a></li>
-                                <li><a href="/gonglve/zt-1026-0-0-0.html#list"  target="_blank">观赏(9)</a></li>
-                                <li><a href="/gonglve/zt-1014-0-0-0.html#list"  target="_blank">周边(8)</a></li>
-                                <li><a href="/gonglve/zt-1016-0-0-0.html#list"  target="_blank">摄影(7)</a></li>
-                                <li><a href="/gonglve/zt-1050-0-0-0.html#list"  target="_blank">旅行主义(7)</a></li>
-                                <li><a href="/gonglve/zt-1047-0-0-0.html#list"  target="_blank">建筑(5)</a></li>
-                                <li><a href="/gonglve/zt-1033-0-0-0.html#list"  target="_blank">家庭(4)</a></li>
-                                <li><a href="/gonglve/zt-1045-0-0-0.html#list"  target="_blank">星旅行(3)</a></li>
-                                <li><a href="/gonglve/zt-1003-0-0-0.html#list"  target="_blank">滑雪(1)</a></li>
-                                <li><a href="/gonglve/zt-1028-0-0-0.html#list"  target="_blank">登山(1)</a></li>
+                                <li v-for="item in items.ctype"><a :href="item.id" target="_blank">{{item.name}}({{item.ccount}})</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1364,6 +1284,24 @@
                 var _this = this;
                 axios.get("/travelnote/findTopTen.do").then(function(response){
                     _this.topTen = response.data.data;
+                });
+            },
+        }
+    })
+
+    var vueType = new Vue({
+        el: '#noteType',
+        data:{
+            types:{}
+        },
+        created:function() {
+            this.getTypes();
+        },
+        methods:{
+            getTypes:function () {
+                var _this = this;
+                axios.get("travelnotetype/findAll.do").then(function(response){
+                    _this.types = response.data.data;
                 });
             },
         }

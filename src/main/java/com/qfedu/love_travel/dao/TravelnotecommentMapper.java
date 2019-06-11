@@ -4,6 +4,7 @@ package com.qfedu.love_travel.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qfedu.love_travel.entity.Travelnotecomment;
+import com.qfedu.love_travel.vo.VTravelNoteComment;
 
 import java.util.List;
 
@@ -23,5 +24,5 @@ public interface TravelnotecommentMapper extends BaseMapper<Travelnotecomment> {
      * @param noteId 游记id
      * @return
      */
-    public List<Travelnotecomment> selectAllCommentByNoteId(Page page, Integer noteId);
+    public List<VTravelNoteComment> selectAllCommentByNoteId(Page page, Integer noteId);
 }
