@@ -107,7 +107,7 @@
 <script>
     $("#login").submit(function(){
         $.ajax({
-            type:"get",
+            type:"post",
             url:"/user/login.do",
             data:$("#login").serialize(),
             dataType:"json",

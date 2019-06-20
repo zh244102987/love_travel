@@ -133,7 +133,7 @@
 
 
 <!-- zhangchu123 -->
-<div class="mfw-focus" id="_j_mfw_focus">
+<div class="mfw-focus" id="_j_mfw_focus" >
     <div class="show-slider" id="_j_top_pic_container">
         <ul class="show-image">
             <li class="first">
@@ -546,77 +546,47 @@
 
             </div>
 
-            <div id="pagelet-block-f3f9658d9cb7133444f9f747a3db60ce" class="pagelet-block" data-api=":note:pagelet:recommendNoteApi" data-params="{&quot;type&quot;:&quot;0&quot;}" data-async="1" data-controller="/js/index/ControllerRecommend"><div id="_j_tn_content">
-                <div class="tn-list" >
-                    <div class="tn-item clearfix" id="didd">
-                        <!--<div class="tn-image" >
-                            <a href="/i/12849650.html" target="_blank">
-                                <img class="" data-src="http://p3-q.mafengwo.net/s13/M00/D8/E5/wKgEaVzizaCAMLEZAAftYuaBp_c55.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" data-rt-src="http://p3-q.mafengwo.net/s13/M00/D8/E5/wKgEaVzizaCAMLEZAAftYuaBp_c55.jpeg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90" src="http://p3-q.mafengwo.net/s13/M00/D8/E5/wKgEaVzizaCAMLEZAAftYuaBp_c55.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" style="display: inline;">
-                            </a>
-                        </div>-->
-                        <div class="tn-wrapper">
-                            <dl>
-                                <dt>
-                                    <a href="/i/12849650.html" target="_blank">穿梭在涂鸦墙林中</a>
-                                </dt>
-                                <dd>
-                                    <a href="/i/12849650.html" target="_blank">这不是一篇游记，只是山水四季记忆的段落。 朴素是这个城市的主色调 酒店窗口眺望 柏林 城，祥和得像一个朴素的老爷爷，谁能想到街头巷尾中隐藏着有趣的灵魂。 涂鸦是这个非典型首都的灵魂 ...</a>
-                                </dd>
-                            </dl>
-                            <div class="tn-extra">
-                    <span class="tn-ding">
-                        <a class="btn-ding" href="javascript:;" data-japp="articleding" data-iid="12849650" data-vote="16" rel="nofollow"></a>
-                        <em id="topvote12849650">16</em>
-                    </span>
-                                <span class="tn-place"><i></i><a href="javascript:void(0);" class="_j_gs_item" rel="nofollow" data-name="柏林" data-objid="10755" data-type="2">柏林</a>，by</span>
-                                <span class="tn-user">
-                        <a href="/u/37799391.html" target="_blank" rel="nofollow">
-                            <img src="http://b4-q.mafengwo.net/s13/M00/55/52/wKgEaVzenCmAXIKcAAlMTO07dGY99.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                            KopiLuwak
-                        </a>
-                    </span>
-                                <span class="tn-nums"><i></i>66/2</span>
-                            </div>
-                        </div>
-                    </div>
+            <div id="pagelet-block-f3f9658d9cb7133444f9f747a3db60ce" class="pagelet-block" data-api=":note:pagelet:recommendNoteApi" data-params="{&quot;type&quot;:&quot;0&quot;}" data-async="1" data-controller="/js/index/ControllerRecommend"><div id="_j_tn_content"  >
+                <div class="tn-list" id="div1" v-for="de in topFive">
+
                     <div class="tn-item clearfix">
                         <div class="tn-image">
                             <a href="/i/13340434.html" target="_blank">
-                                <img class="" data-src="http://n4-q.mafengwo.net/s1/M00/4C/B6/wKgIC1zxN82AI1LdABGs8zDgphY754.JPG?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" data-rt-src="http://n4-q.mafengwo.net/s1/M00/4C/B6/wKgIC1zxN82AI1LdABGs8zDgphY754.JPG?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90" src="http://n4-q.mafengwo.net/s1/M00/4C/B6/wKgIC1zxN82AI1LdABGs8zDgphY754.JPG?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" style="display: inline;">
+                                <img class="" :src="de.sketchimgurl" :src="de.sketchimgurl" :src="de.sketchimgurl" style="display: inline;">
 
 
                             </a>
                         </div>
                         <div class="tn-wrapper">
                             <dl>
-                                <dt>
+                                <dt >
                                     <a class="tn-from-app" href="javascript:void(0);"><i></i>APP<img src="http://b2-q.mafengwo.net/s12/M00/6E/DD/wKgED1uu232AMKEvAAAz-ljBM0k929.png"></a>
-                                    <a href="/i/13340434.html" target="_blank">节假日寻味顺德指南——怪味顺德，等位广东，美食之行？战斗...</a>
+                                    <a href="/i/13340434.html" target="_blank">{{de.title}}</a>
                                 </dt>
                                 <dd>
-                                    <a href="/i/13340434.html" target="_blank">虽然你可能不止一次看到别人的提醒，告诉你不要在法定节假日去 顺德 ，但是作为上班族又只有法定假日才有时间的话，那么此篇你必看！ 2019年的五一小长假，我们用了三天时间，经历了： 两个...</a>
+                                    <a href="/i/13340434.html" target="_blank">{{de.summary}}</a>
                                 </dd>
                             </dl>
                             <div class="tn-extra">
                     <span class="tn-ding">
                         <a class="btn-ding" href="javascript:;" data-japp="articleding" data-iid="13340434" data-vote="79" rel="nofollow"></a>
-                        <em id="topvote13340434">79</em>
+                        <em id="topvote13340434">{{de.likecount}}</em>
                     </span>
                                 <span class="tn-place"><i></i><a href="javascript:void(0);" class="_j_gs_item" rel="nofollow" data-name="顺德" data-objid="10503" data-type="2">顺德</a>，by</span>
                                 <span class="tn-user">
                         <a href="/u/45883179.html" target="_blank" rel="nofollow">
-                            <img src="http://n3-q.mafengwo.net/s12/M00/7C/00/wKgED1v_aFyADb3RAAhw0C2H9Pc26.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                            鹿小粉LL
+                            <img :src="de.headimgurl">
+                            {{de.realname}}
                         </a>
                     </span>
-                                <span class="tn-nums"><i></i>1176/18</span>
+                                <span class="tn-nums"><i></i>{{de.browsecount}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="tn-item clearfix">
                         <div class="tn-image">
                             <a href="/i/13453981.html" target="_blank">
-                                <img class="" data-src="http://b2-q.mafengwo.net/s12/M00/4F/4A/wKgED1ztJcCAEJs3AAwyBra75L4259.jpg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" data-rt-src="http://b2-q.mafengwo.net/s12/M00/4F/4A/wKgED1ztJcCAEJs3AAwyBra75L4259.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90" src="http://b2-q.mafengwo.net/s12/M00/4F/4A/wKgED1ztJcCAEJs3AAwyBra75L4259.jpg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" style="display: inline;">
+                                <img class="" data-src="http://b2-q.mafengwo.net/s12/M00/4F/4A/wKgED1ztJcCAEJs3AAwyBra75L4259.jpg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" data-rt-src="http://b2-q.mafengwo.net/s12/M00/4F/4A/wKgED1ztJcCAEJs3AAwyBra75L4259.jpg?imageMogr2%2Fthumbnail%2F%21440x300r%2Fstrip%2Fgravity%2FCenter%2Fcrop%2F%21440x300%2Fquality%2F90" :src="de.headimgurl" style="display: inline;">
 
 
                             </a>
@@ -759,7 +729,7 @@
                         <div class="tn-wrapper">
                             <dl>
                                 <dt>
-                                    <a href="/i/13347190.html" target="_blank">像个巴黎人一样游巴黎（巴黎小众旅游路线）</a>
+                                    <a href="/i/13347190.html" target="_blank" >啊实打实的</a>
                                 </dt>
                                 <dd>
                                     <a href="/i/13347190.html" target="_blank"> 海明威说：“假如你有幸年轻时在 巴黎 生活过，那么你伺候一生中不论去了哪里她都会与你同在，因为 巴黎 是一场流动的盛宴。” 三月的时候我去 巴黎 玩了两天，这次五月正好有假期就从 伦敦...</a>
@@ -1434,47 +1404,65 @@
         })
     })
 </script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     $(function () {
         $.ajax({
             type:"get",
             url:"/travelnote/findByPage.do?currentPage=2&size=5",
             dataType:"json",
             success:function(data){
+                var _this = this;
                 if(data.code == 1){
-                  var infos = data.data;
+
+                    alert(this.id);
+                      var vxg=new Vue({
+                          el:"#selectBeginPort",
+                          data:{
+                              code:200,
+                              msg:'',
+                              data:{
+                                list:{}
+                              }
+
+
+                          },
+
+
+                      })
 
                 }
 
             }
+
         })
     })
-</script>
-<!--<script >
-
+</script>-->
+<script >
     var vue = new Vue({
-        el: '#div1',
+        el: '#pagelet-block-f3f9658d9cb7133444f9f747a3db60ce',
         data:{
             topFive:{}
         },
         created:function() {
             this.getTopFive();
-
         },
         methods:{
             getTopFive:function () {
                 var _this = this;
-                axios.get("/user/query.do"+window.location.search).then(function(data) {
+                 $.ajax({
+            type:"get",
+            url:"/travelnote/findByPage.do?currentPage=2&size=5",
+            dataType:"json",
+            success:function(data) {
 
-                    _this.topFive = data.data.headimgurl;
-                    alert(data.data.headimgurl);
-
-                });
-                alert(data.data.headimgurl);
-            },
-
+                if (data.code == 1) {
+                    _this.topFive = data.data.records;
+                }
+            }
+                })
+            }
         }
     })
 
-</script>-->
+</script>
 </html>
